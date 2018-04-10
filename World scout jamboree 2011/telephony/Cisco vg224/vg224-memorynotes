@@ -1,0 +1,48 @@
+#
+# configuration examples for Cisco VG224
+# used on wsj 2011, 
+#
+
+
+voiceports:
+
+voice-port 2/3
+ mwi
+ timeouts interdigit 5
+ timeouts call-disconnect 5
+ station-id name 0704
+ station-id number 704
+ caller-id enable
+ cptone SE
+!
+
+(.. 24 times)
+
+dial-peer voice 20 pots
+ destination-pattern 0701
+ port 2/0 
+ authentication username 0701 password xxx
+!
+
+(... 24 times)
+
+dial-peer voice 100 voip
+ destination-pattern T
+ voice-class codec 1
+ session protocol sipv2
+ session target sip-server
+ dtmf-relay sip-notify rtp-nte
+ no vad
+!
+
+sip-ua 
+ authentication username cisco password xxx
+ retry invite 3
+ retry response 3
+ retry bye 3
+ retry cancel 3
+ timers trying 1000
+ mwi-server ipv4:1.3.3.7 expires 3600 port 5060 transport udp 
+ registrar ipv4:1.3.3.7:5060 expires 3600
+ sip-server ipv4:1.3.3.7
+

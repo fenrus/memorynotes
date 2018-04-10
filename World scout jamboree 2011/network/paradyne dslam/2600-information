@@ -1,0 +1,93 @@
+#
+# This file describes how to set up a Paradyne 2600 DSLAM for basic usage
+#
+
+# To reset whole box to factory defaults (then do save to save it to nvram):
+configure factory
+
+
+# Set up out-of-band management (this is untagged eth1):
+configure management out-of-band address IP NETMASK
+configure management default-gateway DEFAULTGATEWAY
+
+configure management web state enable
+configure management telnet state enable
+
+# Enable syslog to external host:
+configure syslog remote create 1.3.3.7
+configure syslog remote create 1.3.3.8
+configure syslog remote enable
+
+# Configure uplink (traffic port, (.1q trunk)):
+configure uplink eth3
+
+# Configure Hostname, Location etc:
+configure system information system-name HOSTNAME
+configure system information system-location LOCATION
+configure system information system-contact email@here
+
+#
+# Password, is set with the command password.
+#
+
+# Configure Date format and timezone:
+configure date-timezone +1
+configure system options date-display-format dd/mm/yy
+
+# Configure Daylight Savings support (goddamn, this is alot of config!):
+configure daylight-saving support enable
+configure daylight-saving change-time 02:00
+configure daylight-saving end-day sunday 
+configure daylight-saving start-day sunday 
+configure daylight-saving start-month march 
+configure daylight-saving end-month october 
+configure daylight-saving start-occurrence-in-month last
+configure daylight-saving end-occurrence-in-month last
+
+
+
+# Configure telnet timeout (20 minutes is max if not 0, thats no timeout):
+configure system options inactivity-timeout 20
+
+# Configure SNTP (sntp synchronize every hour) :
+configure sntp address SNTPIP
+configure sntp enable
+configure sntp interval 1
+
+
+
+
+# Create traffic vlan, name it and disable proxy arp, disable private vlans, enable option-82:
+configure vlan create 666 
+configure vlan modify 666 name VLANNAME
+configure vlan modify 666 proxy-arp disable
+configure vlan modify 666 dhcp-option-82 enable
+configure vlan modify 666 secure disable
+
+# Add a vlan tagged on a port:
+configure vlan modify 666 ports tagged eth3
+
+# Add a vlan untagged to a port:
+configure vlan modify 666 ports untagged 24 set-pvid 
+
+
+# Quick-guide to configure dslport in vl666 on vpi/vci 8/35:
+configure interface dsl 23 name forbindelsenamn
+configure interface dsl 23 atm vc delete 0/35
+configure interface dsl 23 atm vc create 8/35
+configure interface dsl 23 vlan pvid 666
+configure vlan modify 666 ports untagged 23 set-pvid 
+configure interface dsl 23 vlan ingress-filtering disable 
+configure interface dsl 23 state enable
+
+
+
+#
+# Fault tracing details goes here
+#
+
+# Show what speed the dsl-connections have synced to:
+show interface dsl all rates
+
+
+

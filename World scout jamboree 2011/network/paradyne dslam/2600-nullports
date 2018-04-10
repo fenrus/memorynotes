@@ -1,0 +1,209 @@
+pasteable conf to cleanup all dsl ports
+
+
+configure interface dsl 1 name not-in-use
+configure interface dsl 1 atm vc delete 0/35
+configure interface dsl 1 atm vc create 8/35
+configure interface dsl 1 vlan pvid 101
+configure vlan modify 101 ports untagged 5 set-pvid
+configure interface dsl 1 vlan ingress-filtering disable
+configure interface dsl 1 state enable
+
+configure interface dsl 2 name not-in-use
+configure interface dsl 2 atm vc delete 0/35
+configure interface dsl 2 atm vc create 8/35
+configure interface dsl 2 vlan pvid 101
+configure vlan modify 101 ports untagged 2 set-pvid
+configure interface dsl 2 vlan ingress-filtering disable
+configure interface dsl 2 state enable
+
+configure interface dsl 3 name not-in-use
+configure interface dsl 3 atm vc delete 0/35
+configure interface dsl 3 atm vc create 8/35
+configure interface dsl 3 vlan pvid 101
+configure vlan modify 101 ports untagged 3 set-pvid
+configure interface dsl 3 vlan ingress-filtering disable
+configure interface dsl 3 state enable
+
+configure interface dsl 4 name not-in-use
+configure interface dsl 4 atm vc delete 0/35
+configure interface dsl 4 atm vc create 8/35
+configure interface dsl 4 vlan pvid 101
+configure vlan modify 101 ports untagged 4 set-pvid
+configure interface dsl 4 vlan ingress-filtering disable
+configure interface dsl 4 state enable
+
+configure interface dsl 5 name not-in-use
+configure interface dsl 5 atm vc delete 0/35
+configure interface dsl 5 atm vc create 8/35
+configure interface dsl 5 vlan pvid 101
+configure vlan modify 101 ports untagged 5 set-pvid
+configure interface dsl 5 vlan ingress-filtering disable
+configure interface dsl 5 state enable
+
+
+configure interface dsl 6 name not-in-use
+configure interface dsl 6 atm vc delete 0/35
+configure interface dsl 6 atm vc create 8/35
+configure interface dsl 6 vlan pvid 101
+configure vlan modify 101 ports untagged 6 set-pvid
+configure interface dsl 6 vlan ingress-filtering disable
+configure interface dsl 6 state enable
+
+
+configure interface dsl 7 name not-in-use
+configure interface dsl 7 atm vc delete 0/35
+configure interface dsl 7 atm vc create 8/35
+configure interface dsl 7 vlan pvid 101
+configure vlan modify 101 ports untagged 7 set-pvid
+configure interface dsl 7 vlan ingress-filtering disable
+configure interface dsl 7 state enable
+
+configure interface dsl 8 name not-in-use
+configure interface dsl 8 atm vc delete 0/35
+configure interface dsl 8 atm vc create 8/35
+configure interface dsl 8 vlan pvid 101
+configure vlan modify 101 ports untagged 8 set-pvid
+configure interface dsl 8 vlan ingress-filtering disable
+configure interface dsl 8 state enable
+
+
+configure interface dsl 9 name not-in-use
+configure interface dsl 9 atm vc delete 0/35
+configure interface dsl 9 atm vc create 8/35
+configure interface dsl 9 vlan pvid 101
+configure vlan modify 101 ports untagged 9 set-pvid
+configure interface dsl 9 vlan ingress-filtering disable
+configure interface dsl 9 state enable
+
+
+configure interface dsl 10 name not-in-use
+configure interface dsl 10 atm vc delete 0/35
+configure interface dsl 10 atm vc create 8/35
+configure interface dsl 10 vlan pvid 101
+configure vlan modify 101 ports untagged 10 set-pvid
+configure interface dsl 10 vlan ingress-filtering disable
+configure interface dsl 10 state enable
+
+configure interface dsl 11 name not-in-use
+configure interface dsl 11 atm vc delete 0/35
+configure interface dsl 11 atm vc create 8/35
+configure interface dsl 11 vlan pvid 101
+configure vlan modify 101 ports untagged 11 set-pvid
+configure interface dsl 11 vlan ingress-filtering disable
+configure interface dsl 11 state enable
+
+
+configure interface dsl 12 name not-in-use
+configure interface dsl 12 atm vc delete 0/35
+configure interface dsl 12 atm vc create 8/35
+configure interface dsl 12 vlan pvid 101
+configure vlan modify 101 ports untagged 12 set-pvid
+configure interface dsl 12 vlan ingress-filtering disable
+configure interface dsl 12 state enable
+
+
+configure interface dsl 13 name not-in-use
+configure interface dsl 13 atm vc delete 0/35
+configure interface dsl 13 atm vc create 8/35
+configure interface dsl 13 vlan pvid 101
+configure vlan modify 101 ports untagged 13 set-pvid
+configure interface dsl 13 vlan ingress-filtering disable
+configure interface dsl 13 state enable
+
+
+
+configure interface dsl 14 name not-in-use
+configure interface dsl 14 atm vc delete 0/35
+configure interface dsl 14 atm vc create 8/35
+configure interface dsl 14 vlan pvid 101
+configure vlan modify 101 ports untagged 14 set-pvid
+configure interface dsl 14 vlan ingress-filtering disable
+configure interface dsl 14 state enable
+
+configure interface dsl 15 name not-in-use
+configure interface dsl 15 atm vc delete 0/35
+configure interface dsl 15 atm vc create 8/35
+configure interface dsl 15 vlan pvid 101
+configure vlan modify 101 ports untagged 15 set-pvid
+configure interface dsl 15 vlan ingress-filtering disable
+configure interface dsl 15 state enable
+
+
+configure interface dsl 16 name not-in-use
+configure interface dsl 16 atm vc delete 0/35
+configure interface dsl 16 atm vc create 8/35
+configure interface dsl 16 vlan pvid 101
+configure vlan modify 101 ports untagged 16 set-pvid
+configure interface dsl 16 vlan ingress-filtering disable
+configure interface dsl 16 state enable
+
+configure interface dsl 17 name not-in-use
+configure interface dsl 17 atm vc delete 0/35
+configure interface dsl 17 atm vc create 8/35
+configure interface dsl 17 vlan pvid 101
+configure vlan modify 101 ports untagged 17 set-pvid
+configure interface dsl 17 vlan ingress-filtering disable
+configure interface dsl 17 state enable
+
+
+configure interface dsl 18 name not-in-use
+configure interface dsl 18 atm vc delete 0/35
+configure interface dsl 18 atm vc create 8/35
+configure interface dsl 18 vlan pvid 101
+configure vlan modify 101 ports untagged 18 set-pvid
+configure interface dsl 18 vlan ingress-filtering disable
+configure interface dsl 18 state enable
+
+
+configure interface dsl 19 name not-in-use
+configure interface dsl 19 atm vc delete 0/35
+configure interface dsl 19 atm vc create 8/35
+configure interface dsl 19 vlan pvid 101
+configure vlan modify 101 ports untagged 19 set-pvid
+configure interface dsl 19 vlan ingress-filtering disable
+configure interface dsl 19 state enable
+
+configure interface dsl 20 name not-in-use
+configure interface dsl 20 atm vc delete 0/35
+configure interface dsl 20 atm vc create 8/35
+configure interface dsl 20 vlan pvid 101
+configure vlan modify 101 ports untagged 20 set-pvid
+configure interface dsl 20 vlan ingress-filtering disable
+configure interface dsl 20 state enable
+
+
+configure interface dsl 21 name not-in-use
+configure interface dsl 21 atm vc delete 0/35
+configure interface dsl 21 atm vc create 8/35
+configure interface dsl 21 vlan pvid 101
+configure vlan modify 101 ports untagged 21 set-pvid
+configure interface dsl 21 vlan ingress-filtering disable
+configure interface dsl 21 state enable
+
+
+configure interface dsl 22 name not-in-use
+configure interface dsl 22 atm vc delete 0/35
+configure interface dsl 22 atm vc create 8/35
+configure interface dsl 22 vlan pvid 101
+configure vlan modify 101 ports untagged 22 set-pvid
+configure interface dsl 22 vlan ingress-filtering disable
+configure interface dsl 22 state enable
+
+
+configure interface dsl 23 name not-in-use
+configure interface dsl 23 atm vc delete 0/35
+configure interface dsl 23 atm vc create 8/35
+configure interface dsl 23 vlan pvid 101
+configure vlan modify 101 ports untagged 23 set-pvid
+configure interface dsl 23 vlan ingress-filtering disable
+configure interface dsl 23 state enable
+
+
+configure interface dsl 24 name not-in-use
+configure interface dsl 24 atm vc delete 0/35
+configure interface dsl 24 atm vc create 8/35
+configure interface dsl 24 vlan pvid 101
+configure vlan modify 101 ports untagged 24 set-pvid
+configure interface dsl 24 vlan ingress-filtering disable
+configure interface dsl 24 state enable

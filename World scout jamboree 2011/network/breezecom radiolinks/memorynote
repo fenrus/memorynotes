@@ -1,0 +1,46 @@
+#
+# $Id: memorynote 70 2011-05-15 09:47:08Z fenrus $
+# $HeadURL: https://dev.fenrus.se/jamboree/network/config/breezecom/memorynote $
+#
+# Minnesanteckningar för breezecom-länkar.
+# Kan behöva användas vid tillfälle.
+
+På de "gamla" Breezecom länkarna är lösenordet Helpdesk för TECHNICAL ADMIN.
+På de "nya" Breezecom länkarna (de nya har upphöjd plast över loggan på framsidan) är lösenordet Master.
+
+Under menyval: 1 - 3 - a
+Kontrollera Hopping Standard, det skall vara Europe ETSI
+Vid behov ändras det under advanced -> radio -> hopping standard (du behöver vara tech)
+
+
+
+
+Följande settings är fungerande.
+Samma hopping standard/set/sequence och samma essid krävs för att få upp en länk.
+
+AP:
+Hopping Standard:    Europe ETSI
+Hopping Set:         1
+Hopping Sequence:    1
+ESS ID:              measure
+Max. Data Rate:      3 Mbps
+Transmit Antenna:    Use Two Antennas
+Mobility:            Low
+Load Sharing:        Enabled
+Power Level:         High
+Acknowledge Delay:   Regular
+
+
+CLIENT:
+Hopping Standard:    Europe ETSI
+Hopping Set:         1
+Hopping Sequence:    1
+ESS ID:              measure
+Max. Data Rate:      3 Mbps
+Transmit Antenna:    Use Antenna No. 1
+Mobility:            Low
+Load Sharing:        Disabled
+Power Level:         High
+Acknowledge Delay:   Regular
+Preferred AP:        NOT SET 
+
