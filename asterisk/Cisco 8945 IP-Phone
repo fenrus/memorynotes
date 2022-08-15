@@ -1,0 +1,31 @@
+Cisco 8945 telephone memory notes.
+
+The phone can be converted from SCCP to SIP easily with a firmware upgrade.
+phone fetch config via TFTP and HTTP from server specified in dhcp option for tftp server.
+HTTP port used is 6970.
+
+See more details at.
+https://usecallmanager.nz/documentation-overview.html
+
+
+
+1. SIP calling from phone not identified as proper outgoing peer by asterisk
+The phones calls are sourced with "Anonymous@IP" and asterisk fail to identify which peer they are coming from.
+After upgrading to a later SIP firmware in the phones it starts to work. (at least from version 9-3-1-18)
+
+
+
+2. SIP Firmware upgrade train
+
+Needs to be done in specific steps to wok. Otherwise it fails and phones are just frozen.
+From readme:
+If you want to upgrade your phone to SIP 9.3(4) from releases before 9.3(1), you must upgrade your phone to 9.3(1) first, and then perform the upgrade to 9.3(4). This limitation applies to SIP 9.3(4) only; SCCP 9.3(4) is not affected!!!
+
+Release 9.4(2)SR3 can only be upgraded from 9.3(4) and later. Releases prior to 9.3(4) have to be upgraded to 9.3(4) first.
+
+I found that this is required loadInformation details from the XML config.
+	a) SIP894x.9-2-2-0
+	b) SIP8941_8945.9-3-1-18
+	c) SIP8941_8945.9-3-4-17
+
+
